@@ -17,7 +17,6 @@ import {Keyboard} from "@ionic-native/keyboard";
     BrowserModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot()
-
   ],
   bootstrap: [IonicApp],
   entryComponents: [

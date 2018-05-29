@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {AlertController, IonicPage, Keyboard, NavController, Platform} from 'ionic-angular';
 import {ChecklistModel} from "../../models/checklist-model";
 import {DataProvider} from "../../providers/data/data";
@@ -23,8 +23,6 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
-    console.log("home page loaded...");
-
     this.platform.ready().then(() => {
 
       this.storage.get('introShown').then((result) => {
@@ -82,7 +80,8 @@ export class HomePage {
 
             newChecklist.checklistUpdates().subscribe(update => {
               this.save();
-            })
+            });
+            this.save();
           }
         }
       ]

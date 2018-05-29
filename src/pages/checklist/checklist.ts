@@ -17,10 +17,6 @@ export class ChecklistPage {
     this.checklist = navParams.get('checklist');
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ChecklistPage');
-  }
-
   addItem(): void {
     let prompt = this.alertCtrl.create({
       title: 'Add Item',
@@ -32,7 +28,7 @@ export class ChecklistPage {
       ],
       buttons: [
         {
-          text: 'Cancle'
+          text: 'Cancel'
         },
         {
           text: 'Save',
@@ -79,7 +75,7 @@ export class ChecklistPage {
   }
 
   uncheckItems(): void {
-    this.checklist.items.forEach(item => {
+    this.checklist.items.forEach((item) => {
       if(item.checked) {
         this.checklist.toggleItem(item);
       }
